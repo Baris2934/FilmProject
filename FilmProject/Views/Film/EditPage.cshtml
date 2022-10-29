@@ -1,0 +1,35 @@
+﻿@model FilmVM
+@{
+    ViewBag.Title = "EditPage";
+}
+
+<div class="panel panel-primary">
+    <div class="panel panel-body">
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.TextBoxFor(x => x.Film.ID, new { @class = "form-control", placeholder = "Id", @readonly = "true" })
+            </div>
+
+            <div>
+                @Html.TextBoxFor(x => x.Film.Name, new { @class = "form-control", placeholder = "Isim giriniz" })
+            </div>
+
+            <div>
+                @Html.TextBoxFor(x => x.Film.Genre, new { placeholder = "Tür giriniz", @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.TextBoxFor(x => x.Film.Director, new { placeholder = "Yönetmen giriniz", @class = "form-control" })
+            </div>
+
+            <div>
+                @Html.TextBoxFor(x => x.Film.Year, new { placeholder = "Yıl giriniz", @class = "form-control" })
+            </div>
+            <br />
+            <div>
+                <button class="btn btn-primary">Güncelle</button>
+            </div>
+        }
+    </div>
+</div>
